@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Settings</title>
+</head>
+<body>
+
+	<section>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 offset-md-3">
+
+
+					<div class="my-card">
+
+						<form action="" th:action="@{/do-verify-OTP}" method="post"
+							th:object="${otpDto}" enctype="multipart/form-data">
+
+							<h3 th:text="${error}" class="alert-danger" role="alert"></h3>
+
+							<h3 class="text-center">Enter the OTP Here</h3>
+
+							<input type="hidden" name="otpID" th:value="${otpID}" /> <br>
+
+							<div class="form-group">
+								<label for="name">OTP</label> <input required type="text"
+									class="form-control" id="name-field" name="otp"
+									th:value="${otpDto.otp}">
+							</div>
+
+							<div class="invalid-feedback"
+								th:each="e :${#fields.errors('otp')}" th:text="${e}"></div>
+
+							<div class="container text-center">
+								<button type="submit" class="btn btn-primary">Submit:</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+
+</html>

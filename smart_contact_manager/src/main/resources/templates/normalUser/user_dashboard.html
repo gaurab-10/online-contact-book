@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normalUser/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Dashboard</title>
+</head>
+<body>
+
+	<section>
+	<br> <br> 
+
+		<h2 th:text="@{'Hello! '+${user.name}+' welcome to your private Dashboard'  }"></h2>
+	
+	</section>
+</body>
+
+</html>

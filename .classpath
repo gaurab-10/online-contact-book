@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="smart_contact_manager/src/main/java"/>
+	<classpathentry kind="src" path="smart_contact_manager/src/test/java"/>
+	<classpathentry kind="lib" path="smart_contact_manager/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="smart_contact_manager/target/classes"/>
+</classpath>

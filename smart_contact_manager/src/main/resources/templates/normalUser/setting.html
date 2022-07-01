@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normalUser/base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Settings</title>
+</head>
+<body>
+
+	<section>
+		<br> <br>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 offset-md-3">
+
+					<div class="my-card">
+
+						<form action="" th:action="@{/user/updatePassword}" method="post">
+
+
+							<div class="form-group">
+								<h3 class="text-center">Change Your Password</h3>
+								<br> <label for="name">Old Password</label> <input required
+									type="text" class="form-control" id="name-field"
+									name="oldPassword">
+							</div>
+							<br>
+
+							<div class="form-group">
+								<label for="name">New Password</label> <input required
+									type="text" class="form-control" id="name-field"
+									pattern=".{5,}" title="5 characters minimum" name="newPassword">
+							</div>
+							<br>
+
+
+							<div class="form-group">
+								<label for="name">Re-enter New Password::</label> <input
+									pattern=".{5,}" required title="5 characters minimum"
+									type="text" class="form-control" id="name-field"
+									name="confirmPassword">
+							</div>
+							<br>
+
+							<div class="container text-center ">
+								<button type="submit" class="btn btn-primary">Submit:</button>
+								<!--  This button resets the text in the form -->
+								<button type="reset" class="btn btn-warning">Reset:</button>
+							</div>
+
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>
